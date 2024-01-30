@@ -5,6 +5,16 @@ attributes:
 
   extra_jupyter_args: ""
 
+  slurm_partition:
+        label: Slurm partition
+        options:
+                -       - cpu
+                        - cpu_int
+                -       - small
+                        - small_int
+        value: cpu
+        widget: select
+
   preloaded_modules:
           label: Toolchain generation
           widget: select
@@ -32,6 +42,7 @@ attributes:
       - [ "64 cores", "8" ]
 
 form:
+  - slurm_partition
   - preloaded_modules
   - extra_jupyter_args
   - num_hours
