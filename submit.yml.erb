@@ -4,10 +4,10 @@ batch_connect:
 
 script:
         native:
-          - "-N 1"
-          - "--partition=cpu_int"
-          - "--cpus-per-task"
-          - "<%= slot_cnt.to_i * 16 %>"
-          - "--mem=<%= slot_cnt.to_i * 32000 %>"
-          - "--time=<%= num_hours.to_i * 60 %>"
+                - "-N 1"
+                - "--partition=<%= slurm_partition %>"
+                - "--cpus-per-task"
+                - "<%= slot_cnt.to_i * 8 %>"
+                - "--mem=<%= slot_cnt.to_i * 32000 %>"
+                - "--time=<%= num_hours.to_i * 60 %>"
 
