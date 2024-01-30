@@ -1,0 +1,7 @@
+---
+name: JupyterLAB in VENV (TESTING)
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch a JupyterLab with user-configurable options.
